@@ -22,6 +22,7 @@ let minIndex = array.indexOf(newArr)
 
   array.splice(minIndex, 1);
   let newNumber = +array.join('');
+  return newNumber;
 }
 
 
