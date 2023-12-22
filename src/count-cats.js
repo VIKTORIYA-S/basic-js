@@ -22,7 +22,6 @@ function countCats(matrix) {
           quantityCats ++;
           console.log(quantityCats)
         }
-        
       })
     })
   }
