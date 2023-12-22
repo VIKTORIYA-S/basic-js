@@ -14,12 +14,11 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function deleteDigit(n) {
-  let array = (""+n).split("").map(Number)
+  let array = ("" + n).split("").map(Number)
 
 let newArr = Math.min(...array);
 
 let minIndex = array.indexOf(newArr)
-
 
   array.splice(minIndex, 1);
   let newNumber = +array.join('');
