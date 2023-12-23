@@ -2,6 +2,7 @@ const { NotImplementedError } = require('../extensions/index.js');
 
 /**
  * Given a string, return its encoding version.
+ * Учитывая строку, верните ее версию кодировки.
  *
  * @param {String} str
  * @return {String}

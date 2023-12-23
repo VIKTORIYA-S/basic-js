@@ -2,6 +2,7 @@ const { NotImplementedError } = require('../extensions/index.js');
 
 /**
  * Create name of dream team based on the names of its members
+ * Придумайте название команды мечты на основе имен ее участников.
  *  
  * @param {Array} members names of the members 
  * @return {String | Boolean} name of the team or false
