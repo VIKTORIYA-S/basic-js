@@ -15,12 +15,18 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function createDreamTeam(members) {
-  console.log(members.map(name => name.charAt(0).toUpperCase()).sort().join(''));
-  return members.map(name => name.charAt(0).toUpperCase()).sort().join('');
-  // remove line with error and write your code here
-}
+  if (!Array.isArray(members)) {
+    return false;
+  }
 
-createDreamTeam(['Peter', 'Adam', 'Gary', 'Bobby', 'Philip', 'Andrea', 'Evelyn', 'Evelyn', 'Kimberly', 'Denise'])
+  return members
+    .filter((member) => typeof member === "string")
+    .map((member) => member.trim())
+    .filter((member) => member.length > 0)
+    .map((member) => member[0].toUpperCase())
+    .sort()
+    .join("");
+}
 
 
 module.exports = {

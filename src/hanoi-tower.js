@@ -15,17 +15,14 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function calculateHanoi(disksNumber, turnsSpeed) {
+  const turns = 2 ** disksNumber - 1;
 
-    // Общее количество ходов для решения головоломки Ханойских башен
-    const turns = Math.pow(2, disksNumber) - 1;
+  const seconds = Math.floor((turns * 3600) / turnsSpeed);
 
-    // Время в секундах, необходимое для выполнения всех ходов
-    const seconds = Math.floor(turns / (turnSpeed / 3600));
-
-    // Возвращаем объект с количеством ходов и временем в секундах
-    return { turns, seconds };
-
-  // remove line with error and write your code here
+  return {
+    turns,
+    seconds,
+  };
 }
 
 module.exports = {
